@@ -1,20 +1,129 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zhenwei Cui</title>
-    <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Brand | E-Commerce</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <section id="logo">
-        <img src="./logo.png" alt="mo_yu_goods_logo">
-    </section>
-    <section id="daohang">
-        <p>Products</p>
-        <p>Contact</p>
-        <p>About</p>
-    </section>
+  <!-- 顶部导航/汉堡 -->
+  <header class="site-header">
+    <a href="#" class="brand" aria-label="Go to top">Your Brand</a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+    <!-- 桌面端右上角的快速链接（可选，保留简洁只放汉堡也行） -->
+    <nav class="desktop-nav" aria-label="Primary">
+      <a href="#products" class="nav-link">Product</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <a href="#about" class="nav-link">About&nbsp;Us</a>
+    </nav>
+  </header>
+
+  <!-- 移动端抽屉菜单 -->
+  <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-nav" aria-label="Mobile">
+      <a href="#products" class="mobile-link">Product</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+      <a href="#about" class="mobile-link">About&nbsp;Us</a>
+    </nav>
+  </aside>
+
+  <!-- 全屏首屏：公司徽标 -->
+  <section class="hero" id="hero" aria-label="Hero: Company Logo">
+    <!-- 把你的公司徽标放到 assets/logo.png；如果你想用其他路径，修改下方 src 即可 -->
+    <img src="logo.png" alt="Company Logo" class="hero-logo" />
+    <!-- 底部三按钮 -->
+    <div class="hero-cta">
+      <a href="#products" class="pill">Product</a>
+      <a href="#contact" class="pill">Contact</a>
+      <a href="#about" class="pill">About&nbsp;Us</a>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">Scroll</div>
+  </section>
+
+  <!-- 产品 -->
+  <section id="products" class="section">
+    <div class="container">
+      <h2>Our Products</h2>
+      <p class="lead">Showcase your star products here. Grid below is a示例，可替换为实际内容或电商卡片。</p>
+
+      <div class="product-grid">
+        <article class="card">
+          <h3>Product A</h3>
+          <p>Key features and value proposition.</p>
+          <a class="btn" href="#">Learn More</a>
+        </article>
+        <article class="card">
+          <h3>Product B</h3>
+          <p>Key features and value proposition.</p>
+          <a class="btn" href="#">Learn More</a>
+        </article>
+        <article class="card">
+          <h3>Product C</h3>
+          <p>Key features and value proposition.</p>
+          <a class="btn" href="#">Learn More</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系方式 -->
+  <section id="contact" class="section alt">
+    <div class="container">
+      <h2>Contact</h2>
+      <p class="lead">Tell customers how to reach you.</p>
+
+      <form class="contact-form" onsubmit="return false;">
+        <label>
+          <span>Name</span>
+          <input type="text" placeholder="Your name" required />
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" placeholder="you@example.com" required />
+        </label>
+        <label class="full">
+          <span>Message</span>
+          <textarea rows="4" placeholder="How can we help?"></textarea>
+        </label>
+        <button class="btn primary" type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- 关于我们 / 企业文化 -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Us</h2>
+      <p class="lead">
+        Share your company story, mission, and culture. 用简洁有力的语句介绍愿景、价值观、团队与里程碑。
+      </p>
+
+      <div class="features">
+        <div class="feature">
+          <h3>Mission</h3>
+          <p>We exist to solve customer pain points with delightful products.</p>
+        </div>
+        <div class="feature">
+          <h3>Culture</h3>
+          <p>Customer-obsessed, transparent, and continuously improving.</p>
+        </div>
+        <div class="feature">
+          <h3>Milestones</h3>
+          <p>Founded 20XX · 1M+ users · Global shipping.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Your Brand. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
